@@ -36,7 +36,7 @@ public class UserController {
             userRepository.delete(userInfo);
             return "Delete Successfully";
         }
-        return "Invalid data";
+        return "Invalid User";
     }
 
 }
