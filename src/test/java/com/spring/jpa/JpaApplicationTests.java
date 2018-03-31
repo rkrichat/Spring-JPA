@@ -22,7 +22,7 @@ public class JpaApplicationTests {
 	private MockMvc mockMvc;
 
 	@Test
-	public void searchUser_byId_eixist_mustFound() throws Exception{
+	public void searchUser_byId_exist_mustFound() throws Exception{
 		mockMvc.perform(get("/user/Kritchat"))
 				.andExpect(jsonPath("id").value("rkritchat"));
 	}
@@ -34,5 +34,10 @@ public class JpaApplicationTests {
 
 		assertEquals(result.getResponse().getContentAsString(),"");
 	}
+
+	@Test
+    public void searchUser_byIdAndName_exist_mustFound() throws Exception{
+	    
+    }
 
 }
