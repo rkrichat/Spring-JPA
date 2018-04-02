@@ -36,9 +36,9 @@ public class JpaApplicationTests {
 	}
 
 	@Test
-    public void searchUser_byIdAndName_exist_mustFound() throws Exception{
-	    mockMvc.perform(get("/user?id=rkritchat&name=Kritchat"))
-                .andExpect(jsonPath("name").value("Kritchat"));
+    public void searchUser_byEmail_exist_mustFound() throws Exception{
+	    mockMvc.perform(get("/user?email=kritchat@gmail.com"))
+                .andExpect(jsonPath("name").value("kr"));
 	                                    
     }
 
